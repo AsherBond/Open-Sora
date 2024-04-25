@@ -1,6 +1,6 @@
-# 代码仓库和配置文件结构
+# Repo & Config Structure
 
-## 代码仓库结构
+## Repo Structure
 
 ```plaintext
 Open-Sora
@@ -38,10 +38,9 @@ Open-Sora
 └── tools                          -> Tools for data processing and more
 ```
 
-## 配置文件结构
+## Configs
 
-
-我们的配置文件遵循[MMEgine](https://github.com/open-mmlab/mmengine)。 MMEngine 将读取配置文件（“.py”文件）并将其解析为类似字典的对象。
+Our config files follows [MMEgine](https://github.com/open-mmlab/mmengine). MMEngine will reads the config file (a `.py` file) and parse it into a dictionary-like object.
 
 ```plaintext
 Open-Sora
@@ -67,16 +66,16 @@ Open-Sora
     └── pixart                     -> PixArt related configs
 ```
 
-## 推理配置演示
+## Inference config demos
 
-要更改推理设置，可以直接修改相应的配置文件。或者您可以传递参数来覆盖配置文件（[config_utils.py](/opensora/utils/config_utils.py)）。要更改采样提示，您应该修改传递给“--prompt_path”参数的“.txt”文件。
+To change the inference settings, you can directly modify the corresponding config file. Or you can pass arguments to overwrite the config file ([config_utils.py](/opensora/utils/config_utils.py)). To change sampling prompts, you should modify the `.txt` file passed to the `--prompt_path` argument.
 
 ```plaintext
 --prompt_path ./assets/texts/t2v_samples.txt  -> prompt_path
 --ckpt-path ./path/to/your/ckpt.pth           -> model["from_pretrained"]
 ```
 
-下面提供了每个字段的解释。
+The explanation of each field is provided below.
 
 ```python
 # Define sampling size
@@ -118,7 +117,7 @@ prompt_path = "./assets/texts/t2v_samples.txt"  # path to prompt file
 save_dir = "./samples"         # path to save samples
 ```
 
-## 训练配置演示
+## Training config demos
 
 ```python
 # Define sampling size
